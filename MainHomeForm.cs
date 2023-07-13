@@ -15,26 +15,26 @@ namespace Restaurant_Order_Tracking
         public MainHomeForm()
         {
             InitializeComponent();
-            pnlsideBar.Height = btnHome.Height;
-            pnlsideBar.Top = btnHome.Top;
+            pnlSideButtonMarker.Height = btnHome.Height;
+            pnlSideButtonMarker.Top = btnHome.Top;
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            pnlsideBar.Height = btnHome.Height;
-            pnlsideBar.Top = btnHome.Top;
+            pnlSideButtonMarker.Height = btnHome.Height;
+            pnlSideButtonMarker.Top = btnHome.Top;
         }
 
         private void btnCustomerPortal_Click(object sender, EventArgs e)
         {
-            pnlsideBar.Height = btnCustomerPortal.Height;
-            pnlsideBar.Top = btnCustomerPortal.Top;
+            pnlSideButtonMarker.Height = btnCustomerPortal.Height;
+            pnlSideButtonMarker.Top = btnCustomerPortal.Top;
         }
 
         private void btnOrders_Click(object sender, EventArgs e)
         {
-            pnlsideBar.Height = btnOrders.Height;
-            pnlsideBar.Top = btnOrders.Top;
+            pnlSideButtonMarker.Height = btnOrders.Height;
+            pnlSideButtonMarker.Top = btnOrders.Top;
         }
     }
 }

@@ -54,13 +54,15 @@
             this.pnlHeadBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pnlHeadBorder.Location = new System.Drawing.Point(242, -1);
             this.pnlHeadBorder.Name = "pnlHeadBorder";
-            this.pnlHeadBorder.Size = new System.Drawing.Size(861, 43);
+            this.pnlHeadBorder.Size = new System.Drawing.Size(903, 34);
             this.pnlHeadBorder.TabIndex = 1;
             // 
             // btnHome
             // 
-            this.btnHome.BackColor = System.Drawing.Color.Transparent;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.Tan;
             this.btnHome.Location = new System.Drawing.Point(0, 165);
@@ -73,8 +75,10 @@
             // 
             // btnCustomerPortal
             // 
-            this.btnCustomerPortal.BackColor = System.Drawing.Color.Transparent;
-            this.btnCustomerPortal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCustomerPortal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCustomerPortal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCustomerPortal.FlatAppearance.BorderSize = 0;
+            this.btnCustomerPortal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCustomerPortal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCustomerPortal.ForeColor = System.Drawing.Color.Tan;
             this.btnCustomerPortal.Location = new System.Drawing.Point(0, 269);
@@ -87,8 +91,10 @@
             // 
             // btnOrders
             // 
-            this.btnOrders.BackColor = System.Drawing.Color.Transparent;
-            this.btnOrders.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOrders.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnOrders.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnOrders.FlatAppearance.BorderSize = 0;
+            this.btnOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrders.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrders.ForeColor = System.Drawing.Color.Tan;
             this.btnOrders.Location = new System.Drawing.Point(0, 375);
@@ -111,9 +117,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1103, 622);
+            this.ClientSize = new System.Drawing.Size(1144, 620);
             this.Controls.Add(this.pnlHeadBorder);
             this.Controls.Add(this.pnlsideBar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainHomeForm";
             this.pnlsideBar.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -46,14 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomerPortal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomerPortal.Designer.cs">
+      <DependentUpon>CustomerPortal.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainHomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainHomeForm.Designer.cs">
       <DependentUpon>MainHomeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Node.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CustomerPortal.resx">
+      <DependentUpon>CustomerPortal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainHomeForm.resx">
       <DependentUpon>MainHomeForm.cs</DependentUpon>
     </EmbeddedResource>
