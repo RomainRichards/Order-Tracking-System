@@ -29,12 +29,14 @@ namespace Restaurant_Order_Tracking
         {
             pnlSideButtonMarker.Height = btnCustomerPortal.Height;
             pnlSideButtonMarker.Top = btnCustomerPortal.Top;
+            customerPortal1.BringToFront();
         }
 
         private void btnOrders_Click(object sender, EventArgs e)
         {
             pnlSideButtonMarker.Height = btnOrders.Height;
             pnlSideButtonMarker.Top = btnOrders.Top;
+            orders1.BringToFront();
         }
     }
 }

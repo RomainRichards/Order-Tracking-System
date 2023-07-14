@@ -23,75 +23,93 @@ namespace Restaurant_Order_Tracking
             BeverageName = bevName;
             next = n;
         }
-        public class QLinkedList
-        {
-            private Node head;
-            private Node tail;
-            private int size;
-
-            public QLinkedList()
-            {
-                head = null;
-                tail = null;
-                size = 0;
-            }
-
-            public int Length()
-            {
-                return size;
-            }
-            public bool IsEmpty()
-            {
-                return size == 0;
-            }
-            public void addFirst(int cusId, string cusName, string fdName, string bevName)
-            {
-                Node newest = new Node(cusId, cusName, fdName, bevName, null);
-                if (IsEmpty())
-                {
-                    head = newest;
-                    tail = newest;
-                }
-                else
-                {
-                    tail.next = newest;
-                    tail = newest;
-                }
-                size++;
-            }
-            public void addLast(int cusId, string cusName, string fdName, string bevName)
-            {
-                Node newest = new Node(cusId, cusName, fdName, bevName, null);
-                if (IsEmpty())
-                    head = newest;
-                else
-                    tail.next = newest;
-
-                tail = newest;
-                size++;
-            }
-            public void removeFirst()
-            {
-                if (IsEmpty())
-                {
-                    MessageBox.Show("The list is empty!");
-                }
-                else
-                {
-                    head = head.next;
-                }
-                size--;
-                if (IsEmpty())
-                    tail = null;
-            }
-            public int showCustomerIdFirst()
-            {
-                return head.customerID;
-            }
-            public string showCustomerNameFirst()
-            {
-                return head.customerName;
-            }
-        }
     }
+    
+    public class QLinkedList
+    {
+        private Node head;
+        private Node tail;
+        private int size;
+
+        public QLinkedList()
+        {
+            head = null;
+            tail = null;
+            size = 0;
+        }
+
+        public int Length()
+        {
+            return size;
+        }
+        public bool IsEmpty()
+        {
+            return size == 0;
+        }
+        public void addFirst(int cusId, string cusName, string fdName, string bevName)
+        {
+            Node newest = new Node(cusId, cusName, fdName, bevName, null);
+            if (IsEmpty())
+            {
+                head = newest;
+                tail = newest;
+            }
+            else
+            {
+                tail.next = newest;
+                tail = newest;
+            }
+            size++;
+        }
+        public void addLast(int cusId, string cusName, string fdName, string bevName)
+        {
+            Node newest = new Node(cusId, cusName, fdName, bevName, null);
+            if (IsEmpty())
+                head = newest;
+            else
+                tail.next = newest;
+
+            tail = newest;
+            size++;
+        }
+        public void removeFirst()
+        {
+            if (IsEmpty())
+            {
+                MessageBox.Show("The list is empty!");
+            }
+            else
+            {
+                head = head.next;
+            }
+            size--;
+            if (IsEmpty())
+                tail = null;
+        }
+
+        //public void display()
+        //{
+        //    Node p = head;
+        //    while (p != null)
+        //    {
+        //        MessageBox.Show(p.BeverageName);
+        //        p = p.next;
+        //    }
+        //}
+
+        // research on how to use yield to display , to us IEnumerable // 2 list or for each
+
+
+
+        //public int showCustomerIdFirst()
+        //{
+        //    return head.customerID;
+        //}
+        //public string showCustomerNameFirst()
+        //{
+        //    return head.customerName;
+        //}
+    }
+       
+    
 }

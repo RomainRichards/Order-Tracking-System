@@ -13,11 +13,19 @@ namespace Restaurant_Order_Tracking
 {
     public partial class CustomerPortal : UserControl
     {
-        QLinkedList qll = new QLinkedList();
+        //GlobalData;
+
+
         public CustomerPortal()
         {
             InitializeComponent();
+
         }
+
+
+
+
+
 
         // Method to input beverage name when selected.
         // Clears textbox if empty then inputs beverage name. 
@@ -113,13 +121,18 @@ namespace Restaurant_Order_Tracking
         // Add to the queue at the head.
         private void btnmemOrder_Click(object sender, EventArgs e)
         {
-            qll.addLast(01, txtcusName.Text, txtfoodSelc.Text, txtbevSelc.Text);
+            GlobalData.customerlist.addLast(01, txtcusName.Text, txtfoodSelc.Text, txtbevSelc.Text);
+            //od.showData();
+
         }
 
         // Add to the queue at the tail.
         private void btnnonMemOrd_Click(object sender, EventArgs e)
         {
-            qll.addFirst(02, txtcusName.Text, txtfoodSelc.Text, txtbevSelc.Text);
+            GlobalData.customerlist.addFirst(02, txtcusName.Text, txtfoodSelc.Text, txtbevSelc.Text);
+            //od.showData();
+            //od.richtxttotOrd.Text = sb.Append(qll).ToString();
+            
         }
     }
 }
