@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,109 +8,21 @@ using System.Windows.Forms;
 
 namespace Restaurant_Order_Tracking
 {
-    public class Node
+    public class Node<T>
     {
-        public int customerID;
-        public string customerName;
-        public string foodName;
-        public string BeverageName;
-        public Node next;
-
-        public Node(int cusId, string cusName, string fdName, string bevName, Node n)
+        public string customerName { get; set; }
+        public string foodName { get; set; }
+        public string beverageName { get; set; }
+        public int orderNumber { get; set; }
+        public Node<T> Next { get; set; }
+        public Node<T> Prev { get; set; }
+        
+        public Node(string cusName, string fdName, string bevName, int ordNum)
         {
-            customerID = cusId;
             customerName = cusName;
             foodName = fdName;
-            BeverageName = bevName;
-            next = n;
+            beverageName = bevName;
+            orderNumber = ordNum;
         }
-    }
-    
-    public class QLinkedList
-    {
-        private Node head;
-        private Node tail;
-        private int size;
-
-        public QLinkedList()
-        {
-            head = null;
-            tail = null;
-            size = 0;
-        }
-
-        public int Length()
-        {
-            return size;
-        }
-        public bool IsEmpty()
-        {
-            return size == 0;
-        }
-        public void addFirst(int cusId, string cusName, string fdName, string bevName)
-        {
-            Node newest = new Node(cusId, cusName, fdName, bevName, null);
-            if (IsEmpty())
-            {
-                head = newest;
-                tail = newest;
-            }
-            else
-            {
-                tail.next = newest;
-                tail = newest;
-            }
-            size++;
-        }
-        public void addLast(int cusId, string cusName, string fdName, string bevName)
-        {
-            Node newest = new Node(cusId, cusName, fdName, bevName, null);
-            if (IsEmpty())
-                head = newest;
-            else
-                tail.next = newest;
-
-            tail = newest;
-            size++;
-        }
-        public void removeFirst()
-        {
-            if (IsEmpty())
-            {
-                MessageBox.Show("The list is empty!");
-            }
-            else
-            {
-                head = head.next;
-            }
-            size--;
-            if (IsEmpty())
-                tail = null;
-        }
-
-        //public void display()
-        //{
-        //    Node p = head;
-        //    while (p != null)
-        //    {
-        //        MessageBox.Show(p.BeverageName);
-        //        p = p.next;
-        //    }
-        //}
-
-        // research on how to use yield to display , to us IEnumerable // 2 list or for each
-
-
-
-        //public int showCustomerIdFirst()
-        //{
-        //    return head.customerID;
-        //}
-        //public string showCustomerNameFirst()
-        //{
-        //    return head.customerName;
-        //}
-    }
-       
-    
+    }  
 }

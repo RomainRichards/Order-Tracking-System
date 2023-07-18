@@ -7,26 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static Restaurant_Order_Tracking.Node;
 
 namespace Restaurant_Order_Tracking
 {
     public partial class CustomerPortal : UserControl
     {
-        //GlobalData;
-
-
+        
         public CustomerPortal()
         {
             InitializeComponent();
-
+            dataGridView1.DataSource = GlobalData.customerlist;
+            DataGridView dataGrid = dataGridView1;
+            GlobalData.customerlist.PrintElements(dataGrid);
+            
         }
-
-
-
-
-
-
+        
         // Method to input beverage name when selected.
         // Clears textbox if empty then inputs beverage name. 
         public void BeverageName(string input)
@@ -44,16 +39,16 @@ namespace Restaurant_Order_Tracking
 
         // Method to input food name when selected.
         // Clears textbox if empty then inputs food name. 
-        public void FoodName(string input)
+        public void FoodName(string input2)
         {
             if (!string.IsNullOrEmpty(txtfoodSelc.Text))
             {
                 txtfoodSelc.Clear();
-                txtfoodSelc.Text = input;
+                txtfoodSelc.Text = input2;
             }
             else
             {
-                txtfoodSelc.Text = input;
+                txtfoodSelc.Text = input2;
             }
         }
 
@@ -121,18 +116,33 @@ namespace Restaurant_Order_Tracking
         // Add to the queue at the head.
         private void btnmemOrder_Click(object sender, EventArgs e)
         {
-            GlobalData.customerlist.addLast(01, txtcusName.Text, txtfoodSelc.Text, txtbevSelc.Text);
-            //od.showData();
+            DataGridView dataGrid = dataGridView1;
+            var rand = new Random();
+
+            GlobalData.customerlist.AddFirst(txtcusName.Text, txtfoodSelc.Text, txtbevSelc.Text, rand.Next(1,10));
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = GlobalData.customerlist;
+            GlobalData.customerlist.PrintElements(dataGrid);
+            textBox1.Text = GlobalData.customerlist.Length().ToString();
 
         }
 
         // Add to the queue at the tail.
         private void btnnonMemOrd_Click(object sender, EventArgs e)
         {
-            GlobalData.customerlist.addFirst(02, txtcusName.Text, txtfoodSelc.Text, txtbevSelc.Text);
-            //od.showData();
-            //od.richtxttotOrd.Text = sb.Append(qll).ToString();
-            
+            DataGridView dataGrid = dataGridView1;
+            var rand = new Random();
+            var result = MessageBox.Show($"{txtcusName.Text} please confirm order: {txtfoodSelc.Text} & {txtbevSelc.Text}.", "Order Confirmation", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                GlobalData.customerlist.AddLast(txtcusName.Text, txtfoodSelc.Text, txtbevSelc.Text, rand.Next(11, 20));
+
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = GlobalData.customerlist;
+            }
+            GlobalData.customerlist.PrintElements(dataGrid);
+            textBox1.Text = GlobalData.customerlist.Length().ToString();
         }
+        
     }
 }

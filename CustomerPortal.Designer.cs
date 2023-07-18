@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerPortal));
             this.tabFoodandBev = new System.Windows.Forms.TabControl();
             this.tabFood = new System.Windows.Forms.TabPage();
-            this.tabBev = new System.Windows.Forms.TabPage();
-            this.btnBaconSup = new System.Windows.Forms.Button();
-            this.btnchicPlate = new System.Windows.Forms.Button();
-            this.btnsearfoodPizza = new System.Windows.Forms.Button();
-            this.btnFries = new System.Windows.Forms.Button();
-            this.btnGrilChic = new System.Windows.Forms.Button();
             this.btnDoubleBeef = new System.Windows.Forms.Button();
+            this.btnGrilChic = new System.Windows.Forms.Button();
+            this.btnFries = new System.Windows.Forms.Button();
+            this.btnsearfoodPizza = new System.Windows.Forms.Button();
+            this.btnchicPlate = new System.Windows.Forms.Button();
+            this.btnBaconSup = new System.Windows.Forms.Button();
+            this.tabBev = new System.Windows.Forms.TabPage();
             this.btnMojito = new System.Windows.Forms.Button();
             this.btnrumPunch = new System.Windows.Forms.Button();
             this.btnMagarita = new System.Windows.Forms.Button();
@@ -56,9 +56,12 @@
             this.btnnonMemOrd = new System.Windows.Forms.Button();
             this.lblmemOrder = new System.Windows.Forms.Label();
             this.lblnonMemOrd = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabFoodandBev.SuspendLayout();
             this.tabFood.SuspendLayout();
             this.tabBev.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabFoodandBev
@@ -66,7 +69,7 @@
             this.tabFoodandBev.Controls.Add(this.tabFood);
             this.tabFoodandBev.Controls.Add(this.tabBev);
             this.tabFoodandBev.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabFoodandBev.Location = new System.Drawing.Point(3, 3);
+            this.tabFoodandBev.Location = new System.Drawing.Point(7, 3);
             this.tabFoodandBev.Name = "tabFoodandBev";
             this.tabFoodandBev.SelectedIndex = 0;
             this.tabFoodandBev.Size = new System.Drawing.Size(504, 332);
@@ -88,81 +91,20 @@
             this.tabFood.TabIndex = 0;
             this.tabFood.Text = "Foods";
             // 
-            // tabBev
+            // btnDoubleBeef
             // 
-            this.tabBev.BackColor = System.Drawing.Color.Tan;
-            this.tabBev.Controls.Add(this.btnMojito);
-            this.tabBev.Controls.Add(this.btnrumPunch);
-            this.tabBev.Controls.Add(this.btnMagarita);
-            this.tabBev.Controls.Add(this.btnIcedTea);
-            this.tabBev.Controls.Add(this.btnCoke);
-            this.tabBev.Controls.Add(this.btnBeer);
-            this.tabBev.Location = new System.Drawing.Point(4, 25);
-            this.tabBev.Name = "tabBev";
-            this.tabBev.Padding = new System.Windows.Forms.Padding(3);
-            this.tabBev.Size = new System.Drawing.Size(496, 303);
-            this.tabBev.TabIndex = 1;
-            this.tabBev.Text = "Beverages";
-            // 
-            // btnBaconSup
-            // 
-            this.btnBaconSup.BackColor = System.Drawing.Color.White;
-            this.btnBaconSup.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBaconSup.BackgroundImage")));
-            this.btnBaconSup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnBaconSup.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBaconSup.Location = new System.Drawing.Point(7, 7);
-            this.btnBaconSup.Name = "btnBaconSup";
-            this.btnBaconSup.Size = new System.Drawing.Size(157, 142);
-            this.btnBaconSup.TabIndex = 0;
-            this.btnBaconSup.Text = "Bacon Supreme";
-            this.btnBaconSup.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnBaconSup.UseVisualStyleBackColor = false;
-            this.btnBaconSup.Click += new System.EventHandler(this.btnBaconSup_Click);
-            // 
-            // btnchicPlate
-            // 
-            this.btnchicPlate.BackColor = System.Drawing.Color.White;
-            this.btnchicPlate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnchicPlate.BackgroundImage")));
-            this.btnchicPlate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnchicPlate.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnchicPlate.Location = new System.Drawing.Point(170, 7);
-            this.btnchicPlate.Name = "btnchicPlate";
-            this.btnchicPlate.Size = new System.Drawing.Size(157, 142);
-            this.btnchicPlate.TabIndex = 1;
-            this.btnchicPlate.Text = "Chicken Plate";
-            this.btnchicPlate.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnchicPlate.UseVisualStyleBackColor = false;
-            this.btnchicPlate.Click += new System.EventHandler(this.btnchicPlate_Click);
-            // 
-            // btnsearfoodPizza
-            // 
-            this.btnsearfoodPizza.BackColor = System.Drawing.Color.White;
-            this.btnsearfoodPizza.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnsearfoodPizza.BackgroundImage")));
-            this.btnsearfoodPizza.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnsearfoodPizza.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsearfoodPizza.Location = new System.Drawing.Point(332, 155);
-            this.btnsearfoodPizza.Name = "btnsearfoodPizza";
-            this.btnsearfoodPizza.Size = new System.Drawing.Size(157, 142);
-            this.btnsearfoodPizza.TabIndex = 2;
-            this.btnsearfoodPizza.Text = "Seafood Pizza";
-            this.btnsearfoodPizza.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnsearfoodPizza.UseVisualStyleBackColor = false;
-            this.btnsearfoodPizza.Click += new System.EventHandler(this.btnsearfoodPizza_Click);
-            // 
-            // btnFries
-            // 
-            this.btnFries.BackColor = System.Drawing.Color.White;
-            this.btnFries.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFries.BackgroundImage")));
-            this.btnFries.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnFries.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFries.Location = new System.Drawing.Point(7, 154);
-            this.btnFries.Name = "btnFries";
-            this.btnFries.Size = new System.Drawing.Size(157, 142);
-            this.btnFries.TabIndex = 3;
-            this.btnFries.Text = "French Fries";
-            this.btnFries.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnFries.UseVisualStyleBackColor = false;
-            this.btnFries.Click += new System.EventHandler(this.btnFries_Click);
+            this.btnDoubleBeef.BackColor = System.Drawing.Color.White;
+            this.btnDoubleBeef.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDoubleBeef.BackgroundImage")));
+            this.btnDoubleBeef.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDoubleBeef.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoubleBeef.Location = new System.Drawing.Point(170, 155);
+            this.btnDoubleBeef.Name = "btnDoubleBeef";
+            this.btnDoubleBeef.Size = new System.Drawing.Size(157, 142);
+            this.btnDoubleBeef.TabIndex = 5;
+            this.btnDoubleBeef.Text = "Double Decker Beef";
+            this.btnDoubleBeef.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnDoubleBeef.UseVisualStyleBackColor = false;
+            this.btnDoubleBeef.Click += new System.EventHandler(this.btnDoubleBeef_Click);
             // 
             // btnGrilChic
             // 
@@ -179,20 +121,81 @@
             this.btnGrilChic.UseVisualStyleBackColor = false;
             this.btnGrilChic.Click += new System.EventHandler(this.btnGrilChic_Click);
             // 
-            // btnDoubleBeef
+            // btnFries
             // 
-            this.btnDoubleBeef.BackColor = System.Drawing.Color.White;
-            this.btnDoubleBeef.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDoubleBeef.BackgroundImage")));
-            this.btnDoubleBeef.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnDoubleBeef.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoubleBeef.Location = new System.Drawing.Point(170, 155);
-            this.btnDoubleBeef.Name = "btnDoubleBeef";
-            this.btnDoubleBeef.Size = new System.Drawing.Size(157, 142);
-            this.btnDoubleBeef.TabIndex = 5;
-            this.btnDoubleBeef.Text = "Double Decker Beef";
-            this.btnDoubleBeef.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnDoubleBeef.UseVisualStyleBackColor = false;
-            this.btnDoubleBeef.Click += new System.EventHandler(this.btnDoubleBeef_Click);
+            this.btnFries.BackColor = System.Drawing.Color.White;
+            this.btnFries.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFries.BackgroundImage")));
+            this.btnFries.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnFries.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFries.Location = new System.Drawing.Point(7, 154);
+            this.btnFries.Name = "btnFries";
+            this.btnFries.Size = new System.Drawing.Size(157, 142);
+            this.btnFries.TabIndex = 3;
+            this.btnFries.Text = "French Fries";
+            this.btnFries.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnFries.UseVisualStyleBackColor = false;
+            this.btnFries.Click += new System.EventHandler(this.btnFries_Click);
+            // 
+            // btnsearfoodPizza
+            // 
+            this.btnsearfoodPizza.BackColor = System.Drawing.Color.White;
+            this.btnsearfoodPizza.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnsearfoodPizza.BackgroundImage")));
+            this.btnsearfoodPizza.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnsearfoodPizza.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsearfoodPizza.Location = new System.Drawing.Point(332, 155);
+            this.btnsearfoodPizza.Name = "btnsearfoodPizza";
+            this.btnsearfoodPizza.Size = new System.Drawing.Size(157, 142);
+            this.btnsearfoodPizza.TabIndex = 2;
+            this.btnsearfoodPizza.Text = "Seafood Pizza";
+            this.btnsearfoodPizza.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnsearfoodPizza.UseVisualStyleBackColor = false;
+            this.btnsearfoodPizza.Click += new System.EventHandler(this.btnsearfoodPizza_Click);
+            // 
+            // btnchicPlate
+            // 
+            this.btnchicPlate.BackColor = System.Drawing.Color.White;
+            this.btnchicPlate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnchicPlate.BackgroundImage")));
+            this.btnchicPlate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnchicPlate.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnchicPlate.Location = new System.Drawing.Point(170, 7);
+            this.btnchicPlate.Name = "btnchicPlate";
+            this.btnchicPlate.Size = new System.Drawing.Size(157, 142);
+            this.btnchicPlate.TabIndex = 1;
+            this.btnchicPlate.Text = "Chicken Plate";
+            this.btnchicPlate.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnchicPlate.UseVisualStyleBackColor = false;
+            this.btnchicPlate.Click += new System.EventHandler(this.btnchicPlate_Click);
+            // 
+            // btnBaconSup
+            // 
+            this.btnBaconSup.BackColor = System.Drawing.Color.White;
+            this.btnBaconSup.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBaconSup.BackgroundImage")));
+            this.btnBaconSup.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBaconSup.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBaconSup.Location = new System.Drawing.Point(7, 7);
+            this.btnBaconSup.Name = "btnBaconSup";
+            this.btnBaconSup.Size = new System.Drawing.Size(157, 142);
+            this.btnBaconSup.TabIndex = 0;
+            this.btnBaconSup.Text = "Bacon Supreme";
+            this.btnBaconSup.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnBaconSup.UseVisualStyleBackColor = false;
+            this.btnBaconSup.Click += new System.EventHandler(this.btnBaconSup_Click);
+            // 
+            // tabBev
+            // 
+            this.tabBev.BackColor = System.Drawing.Color.Tan;
+            this.tabBev.Controls.Add(this.btnMojito);
+            this.tabBev.Controls.Add(this.btnrumPunch);
+            this.tabBev.Controls.Add(this.btnMagarita);
+            this.tabBev.Controls.Add(this.btnIcedTea);
+            this.tabBev.Controls.Add(this.btnCoke);
+            this.tabBev.Controls.Add(this.btnBeer);
+            this.tabBev.Location = new System.Drawing.Point(4, 25);
+            this.tabBev.Name = "tabBev";
+            this.tabBev.Padding = new System.Windows.Forms.Padding(3);
+            this.tabBev.Size = new System.Drawing.Size(496, 303);
+            this.tabBev.TabIndex = 1;
+            this.tabBev.Text = "Beverages";
             // 
             // btnMojito
             // 
@@ -423,12 +426,31 @@
             this.lblnonMemOrd.TabIndex = 12;
             this.lblnonMemOrd.Text = "Non - Member";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(351, 155);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(542, 245);
+            this.dataGridView1.TabIndex = 14;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(632, 92);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(78, 22);
+            this.textBox1.TabIndex = 15;
+            // 
             // CustomerPortal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblnonMemOrd);
             this.Controls.Add(this.lblmemOrder);
             this.Controls.Add(this.btnnonMemOrd);
@@ -448,6 +470,7 @@
             this.tabFoodandBev.ResumeLayout(false);
             this.tabFood.ResumeLayout(false);
             this.tabBev.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -482,5 +505,7 @@
         private System.Windows.Forms.Button btnnonMemOrd;
         private System.Windows.Forms.Label lblmemOrder;
         private System.Windows.Forms.Label lblnonMemOrd;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

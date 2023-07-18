@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,14 +16,27 @@ namespace Restaurant_Order_Tracking
     {
         public Orders()
         {
+            
             InitializeComponent();
-            showData();
-            richtxttotOrd.Text = GlobalData.customerlist.ToString();
+           // dataGridView1.DataSource = null;
+            dataGridView1.DataSource = GlobalData.customerlist;
+            DataGridView dataGrid = dataGridView1;
+            GlobalData.customerlist.PrintElements(dataGrid);
+            richtxtnextOrd.Text = GlobalData.customerlist.Length().ToString();
         }
-        public void showData()
+
+        private void Orders_Load(object sender, EventArgs e)
         {
             
         }
 
+        private void btnMkOrd_Click(object sender, EventArgs e)
+        {
+            DataGridView dataGrid = dataGridView1;
+            GlobalData.customerlist.PrintElements(dataGrid);
+            richtxtnextOrd.Text = GlobalData.customerlist.Length().ToString();
+        }
     }
+
+
 }

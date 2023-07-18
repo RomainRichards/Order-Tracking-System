@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Restaurant_Order_Tracking
 {
     internal static class GlobalData
     {
-        public static QLinkedList customerlist;
+        public static QLinkedList<string> customerlist;
 
         static GlobalData()
         {
-            customerlist = new QLinkedList();
+            customerlist = new QLinkedList<string>();
         }
-
     }
 }

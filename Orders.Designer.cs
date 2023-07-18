@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Orders));
-            this.richtxttotOrd = new System.Windows.Forms.RichTextBox();
             this.richtxtordServe = new System.Windows.Forms.RichTextBox();
             this.richtxtordMade = new System.Windows.Forms.RichTextBox();
             this.btnMkOrd = new System.Windows.Forms.Button();
@@ -40,15 +39,9 @@
             this.lblordserv = new System.Windows.Forms.Label();
             this.richtxtnextOrd = new System.Windows.Forms.RichTextBox();
             this.lblnextOrd = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // richtxttotOrd
-            // 
-            this.richtxttotOrd.Location = new System.Drawing.Point(23, 107);
-            this.richtxttotOrd.Name = "richtxttotOrd";
-            this.richtxttotOrd.Size = new System.Drawing.Size(246, 327);
-            this.richtxttotOrd.TabIndex = 0;
-            this.richtxttotOrd.Text = "";
             // 
             // richtxtordServe
             // 
@@ -60,9 +53,9 @@
             // 
             // richtxtordMade
             // 
-            this.richtxtordMade.Location = new System.Drawing.Point(331, 107);
+            this.richtxtordMade.Location = new System.Drawing.Point(451, 102);
             this.richtxtordMade.Name = "richtxtordMade";
-            this.richtxtordMade.Size = new System.Drawing.Size(246, 327);
+            this.richtxtordMade.Size = new System.Drawing.Size(140, 327);
             this.richtxtordMade.TabIndex = 2;
             this.richtxtordMade.Text = "";
             // 
@@ -75,6 +68,7 @@
             this.btnMkOrd.TabIndex = 3;
             this.btnMkOrd.Text = "Make Order";
             this.btnMkOrd.UseVisualStyleBackColor = true;
+            this.btnMkOrd.Click += new System.EventHandler(this.btnMkOrd_Click);
             // 
             // btnservOrd
             // 
@@ -112,7 +106,7 @@
             this.lblordMade.BackColor = System.Drawing.Color.White;
             this.lblordMade.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblordMade.ForeColor = System.Drawing.Color.Black;
-            this.lblordMade.Location = new System.Drawing.Point(376, 80);
+            this.lblordMade.Location = new System.Drawing.Point(436, 80);
             this.lblordMade.Name = "lblordMade";
             this.lblordMade.Size = new System.Drawing.Size(167, 19);
             this.lblordMade.TabIndex = 7;
@@ -150,12 +144,23 @@
             this.lblnextOrd.TabIndex = 10;
             this.lblnextOrd.Text = "Next Order";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(73, 118);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(745, 289);
+            this.dataGridView1.TabIndex = 11;
+            // 
             // Orders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblnextOrd);
             this.Controls.Add(this.richtxtnextOrd);
             this.Controls.Add(this.lblordserv);
@@ -165,11 +170,12 @@
             this.Controls.Add(this.btnMkOrd);
             this.Controls.Add(this.richtxtordMade);
             this.Controls.Add(this.richtxtordServe);
-            this.Controls.Add(this.richtxttotOrd);
             this.Controls.Add(this.richtxtOrderHolder);
             this.MinimumSize = new System.Drawing.Size(898, 586);
             this.Name = "Orders";
             this.Size = new System.Drawing.Size(898, 589);
+            this.Load += new System.EventHandler(this.Orders_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,7 +183,6 @@
 
         #endregion
         private System.Windows.Forms.RichTextBox richtxtordServe;
-        private System.Windows.Forms.RichTextBox richtxtordMade;
         private System.Windows.Forms.Button btnMkOrd;
         private System.Windows.Forms.Button btnservOrd;
         private System.Windows.Forms.RichTextBox richtxtOrderHolder;
@@ -186,6 +191,7 @@
         private System.Windows.Forms.Label lblordserv;
         private System.Windows.Forms.RichTextBox richtxtnextOrd;
         private System.Windows.Forms.Label lblnextOrd;
-        private System.Windows.Forms.RichTextBox richtxttotOrd;
+        public System.Windows.Forms.RichTextBox richtxtordMade;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

@@ -52,7 +52,6 @@
     <Compile Include="CustomerPortal.Designer.cs">
       <DependentUpon>CustomerPortal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data.cs" />
     <Compile Include="GlobalDatat.cs" />
     <Compile Include="MainHomeForm.cs">
       <SubType>Form</SubType>
@@ -69,6 +68,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLinkedList.cs" />
     <EmbeddedResource Include="CustomerPortal.resx">
       <DependentUpon>CustomerPortal.cs</DependentUpon>
     </EmbeddedResource>
