@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -64,7 +65,46 @@ namespace Restaurant_Order_Tracking
             AddLast(node);
         }
 
+        public void RemoveFirst()
+        {
+            if(head == null)
+            {
+                return;
+            }
 
+            var next = head.Next;
+
+            if(next != null)
+            {
+                next.Prev = null;
+                head = next;
+
+                return;
+            }
+        }
+
+        public string RemoveLast()
+        {
+            var lastNode = GetLastNode();
+
+            if(lastNode != null)
+            {
+                var prev = lastNode.Prev;
+                if(prev != null)
+                {
+                    prev.Next = null;
+                }
+                lastNode.Prev = null;
+
+                size--;
+            }
+            return lastNode.ToString(); // ro show removed item
+        }
+        public void Clear()
+        {
+            head = null;
+            size = 0;
+        }
 
         public Node<T> GetLastNode()
         {
@@ -87,7 +127,7 @@ namespace Restaurant_Order_Tracking
 
             return default;
         }
-        public void PrintElements(DataGridView dataGrid)
+        public void PrintElements(DataGridView dataGridView)
         {
             DataTable dataTable = new DataTable();
             dataTable.Columns.Add("Customer", typeof(string));
@@ -99,8 +139,19 @@ namespace Restaurant_Order_Tracking
             {
                 dataTable.Rows.Add(item.customerName, item.foodName, item.beverageName, item.orderNumber);
             }
-            dataGrid.DataSource = null;
-            dataGrid.DataSource = dataTable;
+           // dataGridView.DataSource = null;
+            dataGridView.DataSource = dataTable;
+        }
+
+        public void ShowGetLast(RichTextBox rich)
+        {
+            //DataTable dataTable = new DataTable();
+            //dataTable.Columns.Add("Customer", typeof(string));
+            //dataTable.Columns.Add("Food", typeof(string));
+            //dataTable.Columns.Add("Beverage", typeof(string));
+            //dataTable.Columns.Add("Order N0.", typeof(int));
+
+            rich.AppendText(head.ToString());
         }
         public IEnumerator<Node<T>> GetEnumerator()
         {

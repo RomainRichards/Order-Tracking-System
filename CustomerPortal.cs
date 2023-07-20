@@ -19,7 +19,6 @@ namespace Restaurant_Order_Tracking
             dataGridView1.DataSource = GlobalData.customerlist;
             DataGridView dataGrid = dataGridView1;
             GlobalData.customerlist.PrintElements(dataGrid);
-            
         }
         
         // Method to input beverage name when selected.
@@ -142,6 +141,7 @@ namespace Restaurant_Order_Tracking
             }
             GlobalData.customerlist.PrintElements(dataGrid);
             textBox1.Text = GlobalData.customerlist.Length().ToString();
+            
         }
         
     }

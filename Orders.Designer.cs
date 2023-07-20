@@ -53,9 +53,9 @@
             // 
             // richtxtordMade
             // 
-            this.richtxtordMade.Location = new System.Drawing.Point(451, 102);
+            this.richtxtordMade.Location = new System.Drawing.Point(358, 102);
             this.richtxtordMade.Name = "richtxtordMade";
-            this.richtxtordMade.Size = new System.Drawing.Size(140, 327);
+            this.richtxtordMade.Size = new System.Drawing.Size(233, 327);
             this.richtxtordMade.TabIndex = 2;
             this.richtxtordMade.Text = "";
             // 
@@ -79,6 +79,7 @@
             this.btnservOrd.TabIndex = 4;
             this.btnservOrd.Text = "Serve Order";
             this.btnservOrd.UseVisualStyleBackColor = true;
+            this.btnservOrd.Click += new System.EventHandler(this.btnservOrd_Click);
             // 
             // richtxtOrderHolder
             // 
@@ -147,11 +148,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(73, 118);
+            this.dataGridView1.Location = new System.Drawing.Point(73, 233);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(745, 289);
+            this.dataGridView1.Size = new System.Drawing.Size(745, 174);
             this.dataGridView1.TabIndex = 11;
             // 
             // Orders

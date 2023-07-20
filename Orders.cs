@@ -34,7 +34,29 @@ namespace Restaurant_Order_Tracking
         {
             DataGridView dataGrid = dataGridView1;
             GlobalData.customerlist.PrintElements(dataGrid);
-            richtxtnextOrd.Text = GlobalData.customerlist.Length().ToString();
+            richtxtnextOrd.Text += GlobalData.customerlist.Length().ToString();
+            //richtxtnextOrd.AppendText(GlobalData.customerlist.Length().ToString());
+
+        }
+
+        private void btnservOrd_Click(object sender, EventArgs e)
+        {
+            if(GlobalData.customerlist.Length() > 1)
+            {
+                GlobalData.customerlist.RemoveFirst();
+                
+            }
+            else
+            {
+                GlobalData.customerlist.RemoveLast();
+            }
+            DataGridView dataGrid = dataGridView1;
+            GlobalData.customerlist.PrintElements(dataGrid);
+            RichTextBox rich = richtxtordMade;
+            GlobalData.customerlist.ShowGetLast(rich);
+            ///richtxtnextOrd.AppendText(GlobalData.customerlist.Length().ToString());
+            //richtxtnextOrd.Text += GlobalData.customerlist.Length().ToString();
+
         }
     }
 

@@ -132,7 +132,7 @@
             // 
             this.orders1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("orders1.BackgroundImage")));
             this.orders1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.orders1.Location = new System.Drawing.Point(242, 30);
+            this.orders1.Location = new System.Drawing.Point(245, 30);
             this.orders1.MinimumSize = new System.Drawing.Size(898, 586);
             this.orders1.Name = "orders1";
             this.orders1.Size = new System.Drawing.Size(900, 586);
@@ -156,10 +156,10 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1144, 623);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.orders1);
             this.Controls.Add(this.pnlHeadBorder);
             this.Controls.Add(this.pnlsideBar);
             this.Controls.Add(this.customerPortal1);
+            this.Controls.Add(this.orders1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainHomeForm";
             this.Load += new System.EventHandler(this.MainHomeForm_Load);
