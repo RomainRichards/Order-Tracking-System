@@ -54,15 +54,11 @@
             this.btnnonMemOrd = new System.Windows.Forms.Button();
             this.lblmemOrder = new System.Windows.Forms.Label();
             this.lblnonMemOrd = new System.Windows.Forms.Label();
-            this.dataGVOrders = new System.Windows.Forms.DataGridView();
-            this.txtbxNextCust = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.btnserveOrd = new System.Windows.Forms.Button();
-            this.lblNextOrd = new System.Windows.Forms.Label();
+            this.richtxtTotOrd = new System.Windows.Forms.RichTextBox();
+            this.lblTotOrd = new System.Windows.Forms.Label();
             this.tabFoodandBev.SuspendLayout();
             this.tabFood.SuspendLayout();
             this.tabBev.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGVOrders)).BeginInit();
             this.SuspendLayout();
             // 
             // tabFoodandBev
@@ -70,7 +66,7 @@
             this.tabFoodandBev.Controls.Add(this.tabFood);
             this.tabFoodandBev.Controls.Add(this.tabBev);
             this.tabFoodandBev.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabFoodandBev.Location = new System.Drawing.Point(7, 3);
+            this.tabFoodandBev.Location = new System.Drawing.Point(96, 14);
             this.tabFoodandBev.Name = "tabFoodandBev";
             this.tabFoodandBev.SelectedIndex = 0;
             this.tabFoodandBev.Size = new System.Drawing.Size(504, 332);
@@ -291,10 +287,10 @@
             // lblcusName
             // 
             this.lblcusName.AutoSize = true;
-            this.lblcusName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblcusName.BackColor = System.Drawing.Color.Tan;
             this.lblcusName.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcusName.ForeColor = System.Drawing.Color.White;
-            this.lblcusName.Location = new System.Drawing.Point(3, 354);
+            this.lblcusName.ForeColor = System.Drawing.Color.Black;
+            this.lblcusName.Location = new System.Drawing.Point(96, 364);
             this.lblcusName.Name = "lblcusName";
             this.lblcusName.Size = new System.Drawing.Size(153, 19);
             this.lblcusName.TabIndex = 2;
@@ -303,10 +299,10 @@
             // lblfoodSelc
             // 
             this.lblfoodSelc.AutoSize = true;
-            this.lblfoodSelc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblfoodSelc.BackColor = System.Drawing.Color.Tan;
             this.lblfoodSelc.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfoodSelc.ForeColor = System.Drawing.Color.White;
-            this.lblfoodSelc.Location = new System.Drawing.Point(3, 381);
+            this.lblfoodSelc.ForeColor = System.Drawing.Color.Black;
+            this.lblfoodSelc.Location = new System.Drawing.Point(96, 391);
             this.lblfoodSelc.Name = "lblfoodSelc";
             this.lblfoodSelc.Size = new System.Drawing.Size(137, 19);
             this.lblfoodSelc.TabIndex = 3;
@@ -315,10 +311,10 @@
             // lblbevSelc
             // 
             this.lblbevSelc.AutoSize = true;
-            this.lblbevSelc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblbevSelc.BackColor = System.Drawing.Color.Tan;
             this.lblbevSelc.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblbevSelc.ForeColor = System.Drawing.Color.White;
-            this.lblbevSelc.Location = new System.Drawing.Point(3, 409);
+            this.lblbevSelc.ForeColor = System.Drawing.Color.Black;
+            this.lblbevSelc.Location = new System.Drawing.Point(96, 419);
             this.lblbevSelc.Name = "lblbevSelc";
             this.lblbevSelc.Size = new System.Drawing.Size(132, 19);
             this.lblbevSelc.TabIndex = 4;
@@ -329,9 +325,9 @@
             this.txtcusName.BackColor = System.Drawing.Color.White;
             this.txtcusName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtcusName.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcusName.Location = new System.Drawing.Point(214, 351);
+            this.txtcusName.Location = new System.Drawing.Point(275, 362);
             this.txtcusName.Name = "txtcusName";
-            this.txtcusName.Size = new System.Drawing.Size(131, 21);
+            this.txtcusName.Size = new System.Drawing.Size(145, 21);
             this.txtcusName.TabIndex = 5;
             // 
             // txtfoodSelc
@@ -339,9 +335,10 @@
             this.txtfoodSelc.BackColor = System.Drawing.Color.White;
             this.txtfoodSelc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtfoodSelc.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtfoodSelc.Location = new System.Drawing.Point(214, 378);
+            this.txtfoodSelc.Location = new System.Drawing.Point(275, 389);
             this.txtfoodSelc.Name = "txtfoodSelc";
-            this.txtfoodSelc.Size = new System.Drawing.Size(131, 21);
+            this.txtfoodSelc.ReadOnly = true;
+            this.txtfoodSelc.Size = new System.Drawing.Size(145, 21);
             this.txtfoodSelc.TabIndex = 7;
             // 
             // txtbevSelc
@@ -349,17 +346,19 @@
             this.txtbevSelc.BackColor = System.Drawing.Color.White;
             this.txtbevSelc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtbevSelc.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbevSelc.Location = new System.Drawing.Point(214, 406);
+            this.txtbevSelc.Location = new System.Drawing.Point(275, 417);
             this.txtbevSelc.Name = "txtbevSelc";
-            this.txtbevSelc.Size = new System.Drawing.Size(131, 21);
+            this.txtbevSelc.ReadOnly = true;
+            this.txtbevSelc.Size = new System.Drawing.Size(145, 21);
             this.txtbevSelc.TabIndex = 8;
             // 
             // btnmemOrder
             // 
-            this.btnmemOrder.BackColor = System.Drawing.Color.Gray;
-            this.btnmemOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnmemOrder.BackColor = System.Drawing.Color.Crimson;
+            this.btnmemOrder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnmemOrder.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmemOrder.Location = new System.Drawing.Point(53, 522);
+            this.btnmemOrder.ForeColor = System.Drawing.Color.Black;
+            this.btnmemOrder.Location = new System.Drawing.Point(482, 384);
             this.btnmemOrder.Name = "btnmemOrder";
             this.btnmemOrder.Size = new System.Drawing.Size(80, 30);
             this.btnmemOrder.TabIndex = 9;
@@ -369,11 +368,11 @@
             // 
             // btnnonMemOrd
             // 
-            this.btnnonMemOrd.BackColor = System.Drawing.Color.Gray;
-            this.btnnonMemOrd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnnonMemOrd.BackColor = System.Drawing.Color.OldLace;
+            this.btnnonMemOrd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnnonMemOrd.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnnonMemOrd.ForeColor = System.Drawing.Color.Black;
-            this.btnnonMemOrd.Location = new System.Drawing.Point(236, 522);
+            this.btnnonMemOrd.Location = new System.Drawing.Point(482, 445);
             this.btnnonMemOrd.Name = "btnnonMemOrd";
             this.btnnonMemOrd.Size = new System.Drawing.Size(80, 30);
             this.btnnonMemOrd.TabIndex = 10;
@@ -384,10 +383,10 @@
             // lblmemOrder
             // 
             this.lblmemOrder.AutoSize = true;
-            this.lblmemOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblmemOrder.BackColor = System.Drawing.Color.Crimson;
             this.lblmemOrder.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmemOrder.ForeColor = System.Drawing.Color.White;
-            this.lblmemOrder.Location = new System.Drawing.Point(18, 500);
+            this.lblmemOrder.ForeColor = System.Drawing.Color.Black;
+            this.lblmemOrder.Location = new System.Drawing.Point(447, 362);
             this.lblmemOrder.Name = "lblmemOrder";
             this.lblmemOrder.Size = new System.Drawing.Size(153, 19);
             this.lblmemOrder.TabIndex = 11;
@@ -396,73 +395,48 @@
             // lblnonMemOrd
             // 
             this.lblnonMemOrd.AutoSize = true;
-            this.lblnonMemOrd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblnonMemOrd.BackColor = System.Drawing.Color.Tan;
             this.lblnonMemOrd.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnonMemOrd.ForeColor = System.Drawing.Color.White;
-            this.lblnonMemOrd.Location = new System.Drawing.Point(210, 500);
+            this.lblnonMemOrd.ForeColor = System.Drawing.Color.Black;
+            this.lblnonMemOrd.Location = new System.Drawing.Point(456, 423);
             this.lblnonMemOrd.Name = "lblnonMemOrd";
             this.lblnonMemOrd.Size = new System.Drawing.Size(129, 19);
             this.lblnonMemOrd.TabIndex = 12;
             this.lblnonMemOrd.Text = "Non - Member";
             // 
-            // dataGVOrders
+            // richtxtTotOrd
             // 
-            this.dataGVOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGVOrders.Location = new System.Drawing.Point(554, 76);
-            this.dataGVOrders.Name = "dataGVOrders";
-            this.dataGVOrders.RowHeadersWidth = 51;
-            this.dataGVOrders.RowTemplate.Height = 24;
-            this.dataGVOrders.Size = new System.Drawing.Size(555, 230);
-            this.dataGVOrders.TabIndex = 14;
+            this.richtxtTotOrd.BackColor = System.Drawing.Color.White;
+            this.richtxtTotOrd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richtxtTotOrd.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richtxtTotOrd.Location = new System.Drawing.Point(275, 445);
+            this.richtxtTotOrd.Name = "richtxtTotOrd";
+            this.richtxtTotOrd.ReadOnly = true;
+            this.richtxtTotOrd.Size = new System.Drawing.Size(38, 33);
+            this.richtxtTotOrd.TabIndex = 16;
+            this.richtxtTotOrd.Text = "";
             // 
-            // txtbxNextCust
+            // lblTotOrd
             // 
-            this.txtbxNextCust.Location = new System.Drawing.Point(690, 36);
-            this.txtbxNextCust.Name = "txtbxNextCust";
-            this.txtbxNextCust.Size = new System.Drawing.Size(419, 22);
-            this.txtbxNextCust.TabIndex = 15;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(1143, 15);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(54, 42);
-            this.richTextBox1.TabIndex = 16;
-            this.richTextBox1.Text = "";
-            // 
-            // btnserveOrd
-            // 
-            this.btnserveOrd.Location = new System.Drawing.Point(761, 336);
-            this.btnserveOrd.Name = "btnserveOrd";
-            this.btnserveOrd.Size = new System.Drawing.Size(116, 52);
-            this.btnserveOrd.TabIndex = 17;
-            this.btnserveOrd.Text = "Serve Order";
-            this.btnserveOrd.UseVisualStyleBackColor = true;
-            this.btnserveOrd.Click += new System.EventHandler(this.btndelOrd_Click);
-            // 
-            // lblNextOrd
-            // 
-            this.lblNextOrd.AutoSize = true;
-            this.lblNextOrd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblNextOrd.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNextOrd.ForeColor = System.Drawing.Color.White;
-            this.lblNextOrd.Location = new System.Drawing.Point(549, 36);
-            this.lblNextOrd.Name = "lblNextOrd";
-            this.lblNextOrd.Size = new System.Drawing.Size(108, 19);
-            this.lblNextOrd.TabIndex = 18;
-            this.lblNextOrd.Text = "Next Order :";
+            this.lblTotOrd.AutoSize = true;
+            this.lblTotOrd.BackColor = System.Drawing.Color.Tan;
+            this.lblTotOrd.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotOrd.ForeColor = System.Drawing.Color.Black;
+            this.lblTotOrd.Location = new System.Drawing.Point(96, 449);
+            this.lblTotOrd.Name = "lblTotOrd";
+            this.lblTotOrd.Size = new System.Drawing.Size(115, 19);
+            this.lblTotOrd.TabIndex = 17;
+            this.lblTotOrd.Text = "Total Orders :";
             // 
             // CustomerPortal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Tan;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Controls.Add(this.lblNextOrd);
-            this.Controls.Add(this.btnserveOrd);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.txtbxNextCust);
-            this.Controls.Add(this.dataGVOrders);
+            this.Controls.Add(this.lblTotOrd);
+            this.Controls.Add(this.richtxtTotOrd);
             this.Controls.Add(this.lblnonMemOrd);
             this.Controls.Add(this.lblmemOrder);
             this.Controls.Add(this.btnnonMemOrd);
@@ -474,13 +448,13 @@
             this.Controls.Add(this.lblfoodSelc);
             this.Controls.Add(this.lblcusName);
             this.Controls.Add(this.tabFoodandBev);
-            this.MinimumSize = new System.Drawing.Size(1348, 904);
+            this.ForeColor = System.Drawing.Color.Black;
+            this.MinimumSize = new System.Drawing.Size(700, 500);
             this.Name = "CustomerPortal";
-            this.Size = new System.Drawing.Size(1352, 906);
+            this.Size = new System.Drawing.Size(700, 500);
             this.tabFoodandBev.ResumeLayout(false);
             this.tabFood.ResumeLayout(false);
             this.tabBev.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGVOrders)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -513,10 +487,7 @@
         private System.Windows.Forms.Button btnnonMemOrd;
         private System.Windows.Forms.Label lblmemOrder;
         private System.Windows.Forms.Label lblnonMemOrd;
-        private System.Windows.Forms.DataGridView dataGVOrders;
-        private System.Windows.Forms.TextBox txtbxNextCust;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button btnserveOrd;
-        private System.Windows.Forms.Label lblNextOrd;
+        private System.Windows.Forms.RichTextBox richtxtTotOrd;
+        private System.Windows.Forms.Label lblTotOrd;
     }
 }

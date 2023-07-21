@@ -38,10 +38,10 @@ namespace Restaurant_Order_Tracking
         { 
             if(head != null || IsEmpty())
             {
-                nxtOrd.Text = ($"Order No :{head.orderNumber}\t   Items : {head.foodName} & {head.beverageName.ToString()}");
+                nxtOrd.Text = ($"Order No :{head.orderNumber}\tItems : {head.foodName} & {head.beverageName.ToString()}");
             }
             else
-                nxtOrd.Text = string.Empty;
+                nxtOrd.Text = "Orders Complete";
         }
 
         public void AddFirst(Node<T> nodeToAdd)
@@ -160,7 +160,6 @@ namespace Restaurant_Order_Tracking
             {
                 dataTable.Rows.Add(item.customerName, item.foodName, item.beverageName, item.orderNumber);
             }
-           // dataGridView.DataSource = null;
             dataGridView.DataSource = dataTable;
         }
         public IEnumerator<Node<T>> GetEnumerator()

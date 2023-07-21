@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -11,17 +12,10 @@ using System.Windows.Forms;
 namespace Restaurant_Order_Tracking
 {
     public partial class CustomerPortal : UserControl
-    {
-        
+    {        
         public CustomerPortal()
         {
             InitializeComponent();
-            dataGVOrders.DataSource = GlobalData.customerlist;
-            DataGridView totOrd = dataGVOrders;
-            GlobalData.customerlist.PrintElements(totOrd);
-            txtbxNextCust.Text = GlobalData.customerlist.Length().ToString();
-            txtbxNextCust.Text = string.Empty;
-
         }
 
         // Method to input beverage name when selected.
@@ -77,7 +71,7 @@ namespace Restaurant_Order_Tracking
 
         private void btnDoubleBeef_Click(object sender, EventArgs e)
         {
-            FoodName("Double Decker Beef");
+            FoodName("Double Decker");
         }
         private void btnsearfoodPizza_Click(object sender, EventArgs e)
         {
@@ -118,67 +112,28 @@ namespace Restaurant_Order_Tracking
         // Add to the queue at the head.
         private void btnmemOrder_Click(object sender, EventArgs e)
         {
-            DataGridView totOrd = dataGVOrders;
             var rand = new Random();
-
-            GlobalData.customerlist.AddFirst(txtcusName.Text, txtfoodSelc.Text, txtbevSelc.Text, rand.Next(1,10));
-            dataGVOrders.DataSource = null;
-            dataGVOrders.DataSource = GlobalData.customerlist;
-            GlobalData.customerlist.PrintElements(totOrd);
-
-            RichTextBox nxtOrd = richTextBox1;
+            var result = MessageBox.Show($"{txtcusName.Text}, confirm order for {txtfoodSelc.Text} & {txtbevSelc.Text}.", "Order Confirmation", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                GlobalData.customerlist.AddFirst(txtcusName.Text, txtfoodSelc.Text, txtbevSelc.Text, rand.Next(101, 150));
+            }
+            RichTextBox nxtOrd = richtxtTotOrd;
             GlobalData.customerlist.ShowOrderSize(nxtOrd);
-
-
-            TextBox showOrd = txtbxNextCust;
-            GlobalData.customerlist.ShowNextOrder(showOrd);
-
-
         }
 
         // Add to the queue at the tail.
         private void btnnonMemOrd_Click(object sender, EventArgs e)
         {
-            DataGridView totOrd = dataGVOrders;
             var rand = new Random();
             var result = MessageBox.Show($"{txtcusName.Text}, confirm order for {txtfoodSelc.Text} & {txtbevSelc.Text}.", "Order Confirmation", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                GlobalData.customerlist.AddLast(txtcusName.Text, txtfoodSelc.Text, txtbevSelc.Text, rand.Next(11, 20));
+                GlobalData.customerlist.AddLast(txtcusName.Text, txtfoodSelc.Text, txtbevSelc.Text, rand.Next(155, 201));
 
-                dataGVOrders.DataSource = null;
-                dataGVOrders.DataSource = GlobalData.customerlist;
             }
-            GlobalData.customerlist.PrintElements(totOrd);
-
-            
-
-            TextBox showOrd = txtbxNextCust;
-            GlobalData.customerlist.ShowNextOrder(showOrd);
-
-
-        }
-
-        private void btndelOrd_Click(object sender, EventArgs e)
-        {
-            if (GlobalData.customerlist.Length() >= 1)
-            {
-                GlobalData.customerlist.RemoveFirst();
-
-                RichTextBox nxtOrd = richTextBox1;
-                GlobalData.customerlist.ShowOrderSize(nxtOrd);
-
-                TextBox showOrd = txtbxNextCust;
-                GlobalData.customerlist.ShowNextOrder(showOrd);
-            }
-            else if (GlobalData.customerlist.IsEmpty())
-            {
-                MessageBox.Show("No orders found.");
-            }
-
-            DataGridView totOrd = dataGVOrders;
-            GlobalData.customerlist.PrintElements(totOrd);
-
+            RichTextBox nxtOrd = richtxtTotOrd;
+            GlobalData.customerlist.ShowOrderSize(nxtOrd);
         }
     }
 }

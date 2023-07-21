@@ -16,25 +16,30 @@ namespace Restaurant_Order_Tracking
     {
         public Orders()
         {
-            
             InitializeComponent();
-           // dataGridView1.DataSource = null;
+            dataGVOrders.DataSource = GlobalData.customerlist;
         }
 
-        private void Orders_Load(object sender, EventArgs e)
+        private void btnserveOrd_Click(object sender, EventArgs e)
         {
-            
+            if (GlobalData.customerlist.Length() >= 1)
+            {
+                GlobalData.customerlist.RemoveFirst();
+
+                TextBox showOrd = txtbxNextCust;
+                GlobalData.customerlist.ShowNextOrder(showOrd);
+            }
+            else if (GlobalData.customerlist.IsEmpty())
+            {
+                MessageBox.Show("No orders found.");
+            }
+            DataGridView totOrd = dataGVOrders;
+            GlobalData.customerlist.PrintElements(totOrd);
         }
-
-        private void btnMkOrd_Click(object sender, EventArgs e)
+        private void btntotOrd_Click(object sender, EventArgs e)
         {
-
-
-        }
-
-        private void btnservOrd_Click(object sender, EventArgs e)
-        {
-
+            DataGridView totOrd = dataGVOrders;
+            GlobalData.customerlist.PrintElements(totOrd);
         }
     }
 

@@ -19,8 +19,7 @@ namespace Restaurant_Order_Tracking
             InitializeComponent();
             pnlSideButtonMarker.Height = btnHome.Height;
             pnlSideButtonMarker.Top = btnHome.Top;
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = GlobalData.customerlist;
+
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -29,8 +28,6 @@ namespace Restaurant_Order_Tracking
             pnlSideButtonMarker.Top = btnHome.Top;
             customerPortal1.Visible = false;
             orders1.Visible = false;
-            DataGridView dataGrid = dataGridView1;
-            GlobalData.customerlist.PrintElements(dataGrid);
         }
 
         private void btnCustomerPortal_Click(object sender, EventArgs e)
@@ -46,7 +43,7 @@ namespace Restaurant_Order_Tracking
             pnlSideButtonMarker.Height = btnOrders.Height;
             pnlSideButtonMarker.Top = btnOrders.Top;
             orders1.Visible = true;
-            customerPortal1.Visible = false;
+            customerPortal1.Visible = false;            
         }
 
         private void MainHomeForm_Load(object sender, EventArgs e)
