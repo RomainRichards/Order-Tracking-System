@@ -36,8 +36,8 @@
             this.btnHome = new System.Windows.Forms.Button();
             this.pnlHeadBorder = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.orders1 = new Restaurant_Order_Tracking.Orders();
             this.customerPortal1 = new Restaurant_Order_Tracking.CustomerPortal();
+            this.orders1 = new Restaurant_Order_Tracking.Orders();
             this.pnlsideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +51,7 @@
             this.pnlsideBar.Controls.Add(this.btnHome);
             this.pnlsideBar.Location = new System.Drawing.Point(0, -1);
             this.pnlsideBar.Name = "pnlsideBar";
-            this.pnlsideBar.Size = new System.Drawing.Size(246, 623);
+            this.pnlsideBar.Size = new System.Drawing.Size(246, 939);
             this.pnlsideBar.TabIndex = 0;
             // 
             // pnlSideButtonMarker
@@ -115,7 +115,7 @@
             this.pnlHeadBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pnlHeadBorder.Location = new System.Drawing.Point(242, -1);
             this.pnlHeadBorder.Name = "pnlHeadBorder";
-            this.pnlHeadBorder.Size = new System.Drawing.Size(903, 34);
+            this.pnlHeadBorder.Size = new System.Drawing.Size(1348, 34);
             this.pnlHeadBorder.TabIndex = 1;
             // 
             // dataGridView1
@@ -128,16 +128,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(439, 77);
             this.dataGridView1.TabIndex = 4;
             // 
-            // orders1
-            // 
-            this.orders1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("orders1.BackgroundImage")));
-            this.orders1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.orders1.Location = new System.Drawing.Point(245, 30);
-            this.orders1.MinimumSize = new System.Drawing.Size(898, 586);
-            this.orders1.Name = "orders1";
-            this.orders1.Size = new System.Drawing.Size(900, 586);
-            this.orders1.TabIndex = 2;
-            // 
             // customerPortal1
             // 
             this.customerPortal1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("customerPortal1.BackgroundImage")));
@@ -145,8 +135,18 @@
             this.customerPortal1.Location = new System.Drawing.Point(242, 30);
             this.customerPortal1.MinimumSize = new System.Drawing.Size(898, 586);
             this.customerPortal1.Name = "customerPortal1";
-            this.customerPortal1.Size = new System.Drawing.Size(899, 592);
+            this.customerPortal1.Size = new System.Drawing.Size(1348, 904);
             this.customerPortal1.TabIndex = 3;
+            // 
+            // orders1
+            // 
+            this.orders1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("orders1.BackgroundImage")));
+            this.orders1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.orders1.Location = new System.Drawing.Point(245, 30);
+            this.orders1.MinimumSize = new System.Drawing.Size(898, 586);
+            this.orders1.Name = "orders1";
+            this.orders1.Size = new System.Drawing.Size(1327, 904);
+            this.orders1.TabIndex = 2;
             // 
             // MainHomeForm
             // 
@@ -154,7 +154,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1144, 623);
+            this.ClientSize = new System.Drawing.Size(1584, 936);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pnlHeadBorder);
             this.Controls.Add(this.pnlsideBar);

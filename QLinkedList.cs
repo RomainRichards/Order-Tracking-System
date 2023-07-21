@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Restaurant_Order_Tracking
 {
@@ -24,6 +25,25 @@ namespace Restaurant_Order_Tracking
         {
             return size == 0;
         }
+        public void ShowOrderSize(RichTextBox sizeinput)
+        {
+            if (size != 0)
+            {
+                sizeinput.Text = size.ToString();
+            }
+            else
+                sizeinput.Text = string.Empty;
+        }
+        public void ShowNextOrder(System.Windows.Forms.TextBox nxtOrd)
+        { 
+            if(head != null || IsEmpty())
+            {
+                nxtOrd.Text = ($"Order No :{head.orderNumber}\t   Items : {head.foodName} & {head.beverageName.ToString()}");
+            }
+            else
+                nxtOrd.Text = string.Empty;
+        }
+
         public void AddFirst(Node<T> nodeToAdd)
         {
             if (head == null)
@@ -81,9 +101,10 @@ namespace Restaurant_Order_Tracking
 
                 return;
             }
+            head = null;
         }
 
-        public string RemoveLast()
+        public void RemoveLast()
         {
             var lastNode = GetLastNode();
 
@@ -98,7 +119,7 @@ namespace Restaurant_Order_Tracking
 
                 size--;
             }
-            return lastNode.ToString(); // ro show removed item
+            RemoveFirst();
         }
         public void Clear()
         {
@@ -141,17 +162,6 @@ namespace Restaurant_Order_Tracking
             }
            // dataGridView.DataSource = null;
             dataGridView.DataSource = dataTable;
-        }
-
-        public void ShowGetLast(RichTextBox rich)
-        {
-            //DataTable dataTable = new DataTable();
-            //dataTable.Columns.Add("Customer", typeof(string));
-            //dataTable.Columns.Add("Food", typeof(string));
-            //dataTable.Columns.Add("Beverage", typeof(string));
-            //dataTable.Columns.Add("Order N0.", typeof(int));
-
-            rich.AppendText(head.ToString());
         }
         public IEnumerator<Node<T>> GetEnumerator()
         {

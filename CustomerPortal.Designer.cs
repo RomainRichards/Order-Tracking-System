@@ -44,25 +44,25 @@
             this.btnIcedTea = new System.Windows.Forms.Button();
             this.btnCoke = new System.Windows.Forms.Button();
             this.btnBeer = new System.Windows.Forms.Button();
-            this.lblordNum = new System.Windows.Forms.Label();
             this.lblcusName = new System.Windows.Forms.Label();
             this.lblfoodSelc = new System.Windows.Forms.Label();
             this.lblbevSelc = new System.Windows.Forms.Label();
             this.txtcusName = new System.Windows.Forms.TextBox();
-            this.txtordNum = new System.Windows.Forms.TextBox();
             this.txtfoodSelc = new System.Windows.Forms.TextBox();
             this.txtbevSelc = new System.Windows.Forms.TextBox();
             this.btnmemOrder = new System.Windows.Forms.Button();
             this.btnnonMemOrd = new System.Windows.Forms.Button();
             this.lblmemOrder = new System.Windows.Forms.Label();
             this.lblnonMemOrd = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dataGVOrders = new System.Windows.Forms.DataGridView();
+            this.txtbxNextCust = new System.Windows.Forms.TextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.btnserveOrd = new System.Windows.Forms.Button();
+            this.lblNextOrd = new System.Windows.Forms.Label();
             this.tabFoodandBev.SuspendLayout();
             this.tabFood.SuspendLayout();
             this.tabBev.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGVOrders)).BeginInit();
             this.SuspendLayout();
             // 
             // tabFoodandBev
@@ -288,18 +288,6 @@
             this.btnBeer.UseVisualStyleBackColor = false;
             this.btnBeer.Click += new System.EventHandler(this.btnBeer_Click);
             // 
-            // lblordNum
-            // 
-            this.lblordNum.AutoSize = true;
-            this.lblordNum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblordNum.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblordNum.ForeColor = System.Drawing.Color.White;
-            this.lblordNum.Location = new System.Drawing.Point(3, 382);
-            this.lblordNum.Name = "lblordNum";
-            this.lblordNum.Size = new System.Drawing.Size(136, 19);
-            this.lblordNum.TabIndex = 1;
-            this.lblordNum.Text = "Order Number :";
-            // 
             // lblcusName
             // 
             this.lblcusName.AutoSize = true;
@@ -318,7 +306,7 @@
             this.lblfoodSelc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblfoodSelc.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblfoodSelc.ForeColor = System.Drawing.Color.White;
-            this.lblfoodSelc.Location = new System.Drawing.Point(3, 410);
+            this.lblfoodSelc.Location = new System.Drawing.Point(3, 381);
             this.lblfoodSelc.Name = "lblfoodSelc";
             this.lblfoodSelc.Size = new System.Drawing.Size(137, 19);
             this.lblfoodSelc.TabIndex = 3;
@@ -330,7 +318,7 @@
             this.lblbevSelc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblbevSelc.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblbevSelc.ForeColor = System.Drawing.Color.White;
-            this.lblbevSelc.Location = new System.Drawing.Point(3, 438);
+            this.lblbevSelc.Location = new System.Drawing.Point(3, 409);
             this.lblbevSelc.Name = "lblbevSelc";
             this.lblbevSelc.Size = new System.Drawing.Size(132, 19);
             this.lblbevSelc.TabIndex = 4;
@@ -346,22 +334,12 @@
             this.txtcusName.Size = new System.Drawing.Size(131, 21);
             this.txtcusName.TabIndex = 5;
             // 
-            // txtordNum
-            // 
-            this.txtordNum.BackColor = System.Drawing.Color.White;
-            this.txtordNum.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtordNum.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtordNum.Location = new System.Drawing.Point(214, 379);
-            this.txtordNum.Name = "txtordNum";
-            this.txtordNum.Size = new System.Drawing.Size(55, 21);
-            this.txtordNum.TabIndex = 6;
-            // 
             // txtfoodSelc
             // 
             this.txtfoodSelc.BackColor = System.Drawing.Color.White;
             this.txtfoodSelc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtfoodSelc.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtfoodSelc.Location = new System.Drawing.Point(214, 407);
+            this.txtfoodSelc.Location = new System.Drawing.Point(214, 378);
             this.txtfoodSelc.Name = "txtfoodSelc";
             this.txtfoodSelc.Size = new System.Drawing.Size(131, 21);
             this.txtfoodSelc.TabIndex = 7;
@@ -371,7 +349,7 @@
             this.txtbevSelc.BackColor = System.Drawing.Color.White;
             this.txtbevSelc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtbevSelc.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbevSelc.Location = new System.Drawing.Point(214, 435);
+            this.txtbevSelc.Location = new System.Drawing.Point(214, 406);
             this.txtbevSelc.Name = "txtbevSelc";
             this.txtbevSelc.Size = new System.Drawing.Size(131, 21);
             this.txtbevSelc.TabIndex = 8;
@@ -427,30 +405,52 @@
             this.lblnonMemOrd.TabIndex = 12;
             this.lblnonMemOrd.Text = "Non - Member";
             // 
-            // dataGridView1
+            // dataGVOrders
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(351, 155);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(542, 245);
-            this.dataGridView1.TabIndex = 14;
+            this.dataGVOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGVOrders.Location = new System.Drawing.Point(554, 76);
+            this.dataGVOrders.Name = "dataGVOrders";
+            this.dataGVOrders.RowHeadersWidth = 51;
+            this.dataGVOrders.RowTemplate.Height = 24;
+            this.dataGVOrders.Size = new System.Drawing.Size(555, 230);
+            this.dataGVOrders.TabIndex = 14;
             // 
-            // textBox1
+            // txtbxNextCust
             // 
-            this.textBox1.Location = new System.Drawing.Point(632, 92);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(78, 22);
-            this.textBox1.TabIndex = 15;
+            this.txtbxNextCust.Location = new System.Drawing.Point(690, 36);
+            this.txtbxNextCust.Name = "txtbxNextCust";
+            this.txtbxNextCust.Size = new System.Drawing.Size(419, 22);
+            this.txtbxNextCust.TabIndex = 15;
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(667, 28);
+            this.richTextBox1.Location = new System.Drawing.Point(1143, 15);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(54, 42);
             this.richTextBox1.TabIndex = 16;
             this.richTextBox1.Text = "";
+            // 
+            // btnserveOrd
+            // 
+            this.btnserveOrd.Location = new System.Drawing.Point(761, 336);
+            this.btnserveOrd.Name = "btnserveOrd";
+            this.btnserveOrd.Size = new System.Drawing.Size(116, 52);
+            this.btnserveOrd.TabIndex = 17;
+            this.btnserveOrd.Text = "Serve Order";
+            this.btnserveOrd.UseVisualStyleBackColor = true;
+            this.btnserveOrd.Click += new System.EventHandler(this.btndelOrd_Click);
+            // 
+            // lblNextOrd
+            // 
+            this.lblNextOrd.AutoSize = true;
+            this.lblNextOrd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblNextOrd.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNextOrd.ForeColor = System.Drawing.Color.White;
+            this.lblNextOrd.Location = new System.Drawing.Point(549, 36);
+            this.lblNextOrd.Name = "lblNextOrd";
+            this.lblNextOrd.Size = new System.Drawing.Size(108, 19);
+            this.lblNextOrd.TabIndex = 18;
+            this.lblNextOrd.Text = "Next Order :";
             // 
             // CustomerPortal
             // 
@@ -458,29 +458,29 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.lblNextOrd);
+            this.Controls.Add(this.btnserveOrd);
             this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.txtbxNextCust);
+            this.Controls.Add(this.dataGVOrders);
             this.Controls.Add(this.lblnonMemOrd);
             this.Controls.Add(this.lblmemOrder);
             this.Controls.Add(this.btnnonMemOrd);
             this.Controls.Add(this.btnmemOrder);
             this.Controls.Add(this.txtbevSelc);
             this.Controls.Add(this.txtfoodSelc);
-            this.Controls.Add(this.txtordNum);
             this.Controls.Add(this.txtcusName);
             this.Controls.Add(this.lblbevSelc);
             this.Controls.Add(this.lblfoodSelc);
             this.Controls.Add(this.lblcusName);
-            this.Controls.Add(this.lblordNum);
             this.Controls.Add(this.tabFoodandBev);
-            this.MinimumSize = new System.Drawing.Size(898, 586);
+            this.MinimumSize = new System.Drawing.Size(1348, 904);
             this.Name = "CustomerPortal";
-            this.Size = new System.Drawing.Size(899, 592);
+            this.Size = new System.Drawing.Size(1352, 906);
             this.tabFoodandBev.ResumeLayout(false);
             this.tabFood.ResumeLayout(false);
             this.tabBev.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGVOrders)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -503,20 +503,20 @@
         private System.Windows.Forms.Button btnIcedTea;
         private System.Windows.Forms.Button btnCoke;
         private System.Windows.Forms.Button btnBeer;
-        private System.Windows.Forms.Label lblordNum;
         private System.Windows.Forms.Label lblcusName;
         private System.Windows.Forms.Label lblfoodSelc;
         private System.Windows.Forms.Label lblbevSelc;
         private System.Windows.Forms.TextBox txtcusName;
-        private System.Windows.Forms.TextBox txtordNum;
         private System.Windows.Forms.TextBox txtfoodSelc;
         private System.Windows.Forms.TextBox txtbevSelc;
         private System.Windows.Forms.Button btnmemOrder;
         private System.Windows.Forms.Button btnnonMemOrd;
         private System.Windows.Forms.Label lblmemOrder;
         private System.Windows.Forms.Label lblnonMemOrd;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView dataGVOrders;
+        private System.Windows.Forms.TextBox txtbxNextCust;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button btnserveOrd;
+        private System.Windows.Forms.Label lblNextOrd;
     }
 }
