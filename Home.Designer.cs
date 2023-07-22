@@ -29,97 +29,97 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.picbxBurger = new System.Windows.Forms.PictureBox();
+            this.lblrewardsMem = new System.Windows.Forms.Label();
+            this.lbltrippleDB = new System.Windows.Forms.Label();
+            this.lblOnly = new System.Windows.Forms.Label();
+            this.lblhomePrice = new System.Windows.Forms.Label();
+            this.lblhometitle = new System.Windows.Forms.Label();
+            this.lblhomeOnion = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.picbxBurger)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // picbxBurger
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(339, 187);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(347, 224);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.picbxBurger.BackColor = System.Drawing.Color.Transparent;
+            this.picbxBurger.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picbxBurger.BackgroundImage")));
+            this.picbxBurger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picbxBurger.Location = new System.Drawing.Point(339, 187);
+            this.picbxBurger.Name = "picbxBurger";
+            this.picbxBurger.Size = new System.Drawing.Size(347, 224);
+            this.picbxBurger.TabIndex = 0;
+            this.picbxBurger.TabStop = false;
             // 
-            // label1
+            // lblrewardsMem
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Sienna;
-            this.label1.Location = new System.Drawing.Point(64, 440);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(561, 23);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "** Reward Members receive priority service. Join now! **";
+            this.lblrewardsMem.AutoSize = true;
+            this.lblrewardsMem.BackColor = System.Drawing.Color.Transparent;
+            this.lblrewardsMem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblrewardsMem.ForeColor = System.Drawing.Color.Sienna;
+            this.lblrewardsMem.Location = new System.Drawing.Point(64, 440);
+            this.lblrewardsMem.Name = "lblrewardsMem";
+            this.lblrewardsMem.Size = new System.Drawing.Size(561, 23);
+            this.lblrewardsMem.TabIndex = 1;
+            this.lblrewardsMem.Text = "** Reward Members receive priority service. Join now! **";
             // 
-            // label2
+            // lbltrippleDB
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(42, 274);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(340, 68);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Tripple Decker Beef \r\ncoming August 26, 2023\r\n";
+            this.lbltrippleDB.AutoSize = true;
+            this.lbltrippleDB.BackColor = System.Drawing.Color.Transparent;
+            this.lbltrippleDB.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltrippleDB.ForeColor = System.Drawing.Color.Black;
+            this.lbltrippleDB.Location = new System.Drawing.Point(42, 274);
+            this.lbltrippleDB.Name = "lbltrippleDB";
+            this.lbltrippleDB.Size = new System.Drawing.Size(340, 68);
+            this.lbltrippleDB.TabIndex = 2;
+            this.lbltrippleDB.Text = "Tripple Decker Beef \r\ncoming August 26, 2023\r\n";
             // 
-            // label3
+            // lblOnly
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Gold;
-            this.label3.Location = new System.Drawing.Point(44, 100);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 23);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Only \r\n";
+            this.lblOnly.AutoSize = true;
+            this.lblOnly.BackColor = System.Drawing.Color.Transparent;
+            this.lblOnly.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOnly.ForeColor = System.Drawing.Color.Gold;
+            this.lblOnly.Location = new System.Drawing.Point(44, 100);
+            this.lblOnly.Name = "lblOnly";
+            this.lblOnly.Size = new System.Drawing.Size(62, 23);
+            this.lblOnly.TabIndex = 3;
+            this.lblOnly.Text = "Only \r\n";
             // 
-            // label4
+            // lblhomePrice
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Elephant", 70.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Gold;
-            this.label4.Location = new System.Drawing.Point(21, 125);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(298, 151);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "$12";
+            this.lblhomePrice.AutoSize = true;
+            this.lblhomePrice.BackColor = System.Drawing.Color.Transparent;
+            this.lblhomePrice.Font = new System.Drawing.Font("Elephant", 70.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblhomePrice.ForeColor = System.Drawing.Color.Gold;
+            this.lblhomePrice.Location = new System.Drawing.Point(21, 125);
+            this.lblhomePrice.Name = "lblhomePrice";
+            this.lblhomePrice.Size = new System.Drawing.Size(298, 151);
+            this.lblhomePrice.TabIndex = 4;
+            this.lblhomePrice.Text = "$12";
             // 
-            // label6
+            // lblhometitle
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Sienna;
-            this.label6.Location = new System.Drawing.Point(185, 14);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(330, 47);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Burger Madness";
+            this.lblhometitle.AutoSize = true;
+            this.lblhometitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblhometitle.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblhometitle.ForeColor = System.Drawing.Color.Sienna;
+            this.lblhometitle.Location = new System.Drawing.Point(185, 14);
+            this.lblhometitle.Name = "lblhometitle";
+            this.lblhometitle.Size = new System.Drawing.Size(330, 47);
+            this.lblhometitle.TabIndex = 6;
+            this.lblhometitle.Text = "Burger Madness";
             // 
-            // label5
+            // lblhomeOnion
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(44, 342);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(413, 26);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "With Onions and tamato and ketchup";
+            this.lblhomeOnion.AutoSize = true;
+            this.lblhomeOnion.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblhomeOnion.ForeColor = System.Drawing.Color.Black;
+            this.lblhomeOnion.Location = new System.Drawing.Point(44, 342);
+            this.lblhomeOnion.Name = "lblhomeOnion";
+            this.lblhomeOnion.Size = new System.Drawing.Size(330, 21);
+            this.lblhomeOnion.TabIndex = 7;
+            this.lblhomeOnion.Text = "With Onions and tamato and ketchup";
             // 
             // Home
             // 
@@ -127,18 +127,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblhomeOnion);
+            this.Controls.Add(this.lblhometitle);
+            this.Controls.Add(this.lblhomePrice);
+            this.Controls.Add(this.lblOnly);
+            this.Controls.Add(this.lbltrippleDB);
+            this.Controls.Add(this.lblrewardsMem);
+            this.Controls.Add(this.picbxBurger);
             this.MaximumSize = new System.Drawing.Size(700, 500);
             this.MinimumSize = new System.Drawing.Size(700, 500);
             this.Name = "Home";
-            this.Size = new System.Drawing.Size(700, 500);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Size = new System.Drawing.Size(560, 400);
+            ((System.ComponentModel.ISupportInitialize)(this.picbxBurger)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,12 +146,12 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox picbxBurger;
+        private System.Windows.Forms.Label lblrewardsMem;
+        private System.Windows.Forms.Label lbltrippleDB;
+        private System.Windows.Forms.Label lblOnly;
+        private System.Windows.Forms.Label lblhomePrice;
+        private System.Windows.Forms.Label lblhometitle;
+        private System.Windows.Forms.Label lblhomeOnion;
     }
 }

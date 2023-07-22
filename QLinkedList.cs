@@ -12,7 +12,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 namespace Restaurant_Order_Tracking
 {
     /// <summary>
-    /// Queue implemented using a Linked List.
+    /// Queue implemented using a custom Linked List.
     /// Implement a Custom Linked List and IEnumerable Interface Members.  
     /// </summary>
     public class QLinkedList<T> : IEnumerable<Node<T>>

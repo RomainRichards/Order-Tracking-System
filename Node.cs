@@ -8,6 +8,11 @@ using System.Windows.Forms;
 
 namespace Restaurant_Order_Tracking
 {
+    /// <summary>
+    /// Node<T> class with different public properties we want to store in the node. 
+    /// Next property represents the next node from the custom linked list.
+    /// Prev represents the previous node.
+    /// </summary>
     public class Node<T>
     {
         public string customerName { get; set; }

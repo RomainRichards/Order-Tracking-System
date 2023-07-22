@@ -109,11 +109,14 @@ namespace Restaurant_Order_Tracking
             BeverageName("Iced Tea");
         }
 
-        // Add to the queue at the head.
+        // Add node to the front of the custom linked list.
+        // Confirms each order.
+        // Shows totals size of linked list.
         private void btnmemOrder_Click(object sender, EventArgs e)
         {
             var rand = new Random();
-            var result = MessageBox.Show($"{txtcusName.Text}, confirm order for {txtfoodSelc.Text} & {txtbevSelc.Text}.", "Order Confirmation", MessageBoxButtons.YesNo);
+            var result = MessageBox.Show($"{txtcusName.Text}, confirm order for {txtfoodSelc.Text} &" +
+                $" {txtbevSelc.Text}.", "Order Confirmation", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 GlobalData.customerlist.AddFirst(txtcusName.Text, txtfoodSelc.Text, txtbevSelc.Text, rand.Next(101, 150));
@@ -122,11 +125,14 @@ namespace Restaurant_Order_Tracking
             GlobalData.customerlist.ShowOrderSize(nxtOrd);
         }
 
-        // Add to the queue at the tail.
+        // Add node to the custom linked list. 
+        // Confirms each order.
+        // Shows totals size of linked list.
         private void btnnonMemOrd_Click(object sender, EventArgs e)
         {
             var rand = new Random();
-            var result = MessageBox.Show($"{txtcusName.Text}, confirm order for {txtfoodSelc.Text} & {txtbevSelc.Text}.", "Order Confirmation", MessageBoxButtons.YesNo);
+            var result = MessageBox.Show($"{txtcusName.Text}, confirm order for {txtfoodSelc.Text} &" +
+                $" {txtbevSelc.Text}.", "Order Confirmation", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 GlobalData.customerlist.AddLast(txtcusName.Text, txtfoodSelc.Text, txtbevSelc.Text, rand.Next(155, 201));

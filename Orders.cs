@@ -23,7 +23,9 @@ namespace Restaurant_Order_Tracking
 
         /// <summary>
         /// Implemented the RemoveFirst method. This simulates the FIFO. 
-        /// Implement the ShowNextOrder method. This prints the next order on the text box. 
+        /// Implement the ShowNextOrder method. This prints the next order to the text box. 
+        /// Shows messagage if there are no orders to show next.
+        /// Updates data gridview when node is removed. 
         /// </summary>
         private void btnserveOrd_Click(object sender, EventArgs e)
         {
@@ -41,6 +43,10 @@ namespace Restaurant_Order_Tracking
             DataGridView totOrd = dataGVOrders;
             GlobalData.customerlist.PrintElements(totOrd);
         }
+        /// <summary>
+        /// Displays all nodes in the custom linked list to the dataGridView. 
+        /// Shows the first order to be served.
+        /// </summary>
         private void btntotOrd_Click(object sender, EventArgs e)
         {
             DataGridView totOrd = dataGVOrders;

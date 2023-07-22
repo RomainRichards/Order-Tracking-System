@@ -39,8 +39,10 @@
             this.home1 = new Restaurant_Order_Tracking.Home();
             this.orders1 = new Restaurant_Order_Tracking.Orders();
             this.customerPortal1 = new Restaurant_Order_Tracking.CustomerPortal();
+            this.lblcloseApp = new System.Windows.Forms.Label();
             this.pnlsideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlHeadBorder.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlsideBar
@@ -60,10 +62,10 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(48, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(30, 13);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(151, 132);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.Size = new System.Drawing.Size(191, 152);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -126,6 +128,7 @@
             // pnlHeadBorder
             // 
             this.pnlHeadBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlHeadBorder.Controls.Add(this.lblcloseApp);
             this.pnlHeadBorder.Location = new System.Drawing.Point(242, -1);
             this.pnlHeadBorder.Name = "pnlHeadBorder";
             this.pnlHeadBorder.Size = new System.Drawing.Size(704, 39);
@@ -146,7 +149,7 @@
             // 
             this.orders1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("orders1.BackgroundImage")));
             this.orders1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.orders1.Location = new System.Drawing.Point(243, 23);
+            this.orders1.Location = new System.Drawing.Point(242, 32);
             this.orders1.MaximumSize = new System.Drawing.Size(700, 500);
             this.orders1.MinimumSize = new System.Drawing.Size(700, 500);
             this.orders1.Name = "orders1";
@@ -159,12 +162,26 @@
             this.customerPortal1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("customerPortal1.BackgroundImage")));
             this.customerPortal1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.customerPortal1.ForeColor = System.Drawing.Color.Black;
-            this.customerPortal1.Location = new System.Drawing.Point(244, 32);
+            this.customerPortal1.Location = new System.Drawing.Point(243, 31);
             this.customerPortal1.MaximumSize = new System.Drawing.Size(700, 500);
             this.customerPortal1.MinimumSize = new System.Drawing.Size(700, 500);
             this.customerPortal1.Name = "customerPortal1";
             this.customerPortal1.Size = new System.Drawing.Size(700, 500);
             this.customerPortal1.TabIndex = 2;
+            // 
+            // lblcloseApp
+            // 
+            this.lblcloseApp.AutoSize = true;
+            this.lblcloseApp.BackColor = System.Drawing.Color.Transparent;
+            this.lblcloseApp.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcloseApp.ForeColor = System.Drawing.Color.Sienna;
+            this.lblcloseApp.Location = new System.Drawing.Point(660, 6);
+            this.lblcloseApp.Name = "lblcloseApp";
+            this.lblcloseApp.Size = new System.Drawing.Size(31, 26);
+            this.lblcloseApp.TabIndex = 5;
+            this.lblcloseApp.Text = "X";
+            this.lblcloseApp.Click += new System.EventHandler(this.label1_Click);
+            this.lblcloseApp.MouseHover += new System.EventHandler(this.lblcloseApp_MouseHover);
             // 
             // MainHomeForm
             // 
@@ -183,6 +200,8 @@
             this.Load += new System.EventHandler(this.MainHomeForm_Load);
             this.pnlsideBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlHeadBorder.ResumeLayout(false);
+            this.pnlHeadBorder.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -199,6 +218,7 @@
         private CustomerPortal customerPortal1;
         private Orders orders1;
         private Home home1;
+        private System.Windows.Forms.Label lblcloseApp;
     }
 }
 
