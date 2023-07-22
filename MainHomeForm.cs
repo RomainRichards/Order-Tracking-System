@@ -19,37 +19,32 @@ namespace Restaurant_Order_Tracking
             InitializeComponent();
             pnlSideButtonMarker.Height = btnHome.Height;
             pnlSideButtonMarker.Top = btnHome.Top;
-
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
             pnlSideButtonMarker.Height = btnHome.Height;
             pnlSideButtonMarker.Top = btnHome.Top;
-            customerPortal1.Visible = false;
-            orders1.Visible = false;
+            home1.BringToFront();
         }
 
         private void btnCustomerPortal_Click(object sender, EventArgs e)
         {
             pnlSideButtonMarker.Height = btnCustomerPortal.Height;
             pnlSideButtonMarker.Top = btnCustomerPortal.Top;
-            customerPortal1.Visible = true;
-            orders1.Visible = false;
+            customerPortal1.BringToFront();
         }
 
         private void btnOrders_Click(object sender, EventArgs e)
         {
             pnlSideButtonMarker.Height = btnOrders.Height;
             pnlSideButtonMarker.Top = btnOrders.Top;
-            orders1.Visible = true;
-            customerPortal1.Visible = false;            
+            orders1.BringToFront();
         }
 
         private void MainHomeForm_Load(object sender, EventArgs e)
         {
-            customerPortal1.Visible = false;
-            orders1.Visible = false;
+            home1.BringToFront();
         }
     }
 }

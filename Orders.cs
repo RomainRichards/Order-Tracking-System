@@ -17,9 +17,14 @@ namespace Restaurant_Order_Tracking
         public Orders()
         {
             InitializeComponent();
+            // Sets the data source for the orders grid to the custom globaldata list. 
             dataGVOrders.DataSource = GlobalData.customerlist;
         }
 
+        /// <summary>
+        /// Implemented the RemoveFirst method. This simulates the FIFO. 
+        /// Implement the ShowNextOrder method. This prints the next order on the text box. 
+        /// </summary>
         private void btnserveOrd_Click(object sender, EventArgs e)
         {
             if (GlobalData.customerlist.Length() >= 1)
@@ -40,6 +45,9 @@ namespace Restaurant_Order_Tracking
         {
             DataGridView totOrd = dataGVOrders;
             GlobalData.customerlist.PrintElements(totOrd);
+
+            TextBox showOrd = txtbxNextCust;
+            GlobalData.customerlist.ShowNextOrder(showOrd);
         }
     }
 

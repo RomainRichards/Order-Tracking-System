@@ -53,6 +53,12 @@
       <DependentUpon>CustomerPortal.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalDatat.cs" />
+    <Compile Include="Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainHomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
     <Compile Include="QLinkedList.cs" />
     <EmbeddedResource Include="CustomerPortal.resx">
       <DependentUpon>CustomerPortal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainHomeForm.resx">
       <DependentUpon>MainHomeForm.cs</DependentUpon>

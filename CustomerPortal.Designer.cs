@@ -390,7 +390,7 @@
             this.lblmemOrder.Name = "lblmemOrder";
             this.lblmemOrder.Size = new System.Drawing.Size(153, 19);
             this.lblmemOrder.TabIndex = 11;
-            this.lblmemOrder.Text = "Rewards Member";
+            this.lblmemOrder.Text = "Reward Members";
             // 
             // lblnonMemOrd
             // 

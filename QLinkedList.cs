@@ -11,20 +11,29 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Restaurant_Order_Tracking
 {
-    
+    /// <summary>
+    /// Queue implemented using a Linked List.
+    /// Implement a Custom Linked List and IEnumerable Interface Members.  
+    /// </summary>
     public class QLinkedList<T> : IEnumerable<Node<T>>
     {
+        // head represent the first node in the linked list and size represents the number of nodes in the linked list.
         public Node<T> head { get; set; }
         public int size { get; set; }
 
+        // Method to get the size of the linked list. 
         public int Length()
         {
             return size;
         }
+
+        // Method to check if linked list is empty. 
         public bool IsEmpty()
         {
             return size == 0;
         }
+
+        // Method to show linked list size, takes the input of a richtextbox to display on any user control. 
         public void ShowOrderSize(RichTextBox sizeinput)
         {
             if (size != 0)
@@ -34,16 +43,19 @@ namespace Restaurant_Order_Tracking
             else
                 sizeinput.Text = string.Empty;
         }
+
+        // Method to show the order that is next (head), takes the input of a textbox to display on any user control. 
         public void ShowNextOrder(System.Windows.Forms.TextBox nxtOrd)
         { 
             if(head != null || IsEmpty())
             {
-                nxtOrd.Text = ($"Order No :{head.orderNumber}\tItems : {head.foodName} & {head.beverageName.ToString()}");
+                nxtOrd.Text = ($"Order No :{head.orderNumber}  Items : {head.foodName} & {head.beverageName.ToString()}");
             }
             else
-                nxtOrd.Text = "Orders Complete";
+                nxtOrd.Text = "\t\tOrders Complete";
         }
 
+        // Method to add to the front of the linked list (head).
         public void AddFirst(Node<T> nodeToAdd)
         {
             if (head == null)
@@ -64,6 +76,8 @@ namespace Restaurant_Order_Tracking
             var node = new Node<T>( cusName, fdName, bevName, ordNum);
             AddFirst(node);
         }
+
+        // Method to add to the end of the linked list. // ENQUEUE
         public void AddLast(Node<T> nodeToAdd)
         {
             var lastNode = GetLastNode();
@@ -85,6 +99,7 @@ namespace Restaurant_Order_Tracking
             AddLast(node);
         }
 
+        // Method to remove the first node in the linked list. // DEQUEUE    
         public void RemoveFirst()
         {
             if(head == null)
@@ -104,6 +119,7 @@ namespace Restaurant_Order_Tracking
             head = null;
         }
 
+        // Method to remove the last node in the linked list.
         public void RemoveLast()
         {
             var lastNode = GetLastNode();
@@ -121,12 +137,15 @@ namespace Restaurant_Order_Tracking
             }
             RemoveFirst();
         }
+
+        // Method to cleach the entire linked list.
         public void Clear()
         {
             head = null;
             size = 0;
         }
 
+        // Method used to get last node in the linked list.
         public Node<T> GetLastNode()
         {
             if (head == null)
@@ -148,6 +167,11 @@ namespace Restaurant_Order_Tracking
 
             return default;
         }
+
+        // Method to display elements in the linked list. 
+        // Attach the linked list to a data table.
+        // Set the datasource for the datagridview = to the data table containing the linked list.
+        // Takes input of dataGridView to be used on any user control.
         public void PrintElements(DataGridView dataGridView)
         {
             DataTable dataTable = new DataTable();
@@ -162,6 +186,11 @@ namespace Restaurant_Order_Tracking
             }
             dataGridView.DataSource = dataTable;
         }
+
+        // Implementation of IEnumberable<T> interface, enumerate objects of the class using the for each loop.
+        // Used to traverse through the elements of the linked list. 
+        // Iterate through all the nodes in the linked list until it reaches the end, null.
+        // Yield keyword is used to return one value at a time. // ITERATE
         public IEnumerator<Node<T>> GetEnumerator()
         {
             Node<T> currentNode = head;
@@ -172,14 +201,10 @@ namespace Restaurant_Order_Tracking
             }
         }
 
+        // Non-generic version of the 'GetEnumerator' method. 
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
-        }
-
-        internal void AddFirst(QLinkedList<string> qLinkedList)
-        {
-            throw new NotImplementedException();
         }
     }
 }
