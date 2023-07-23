@@ -123,6 +123,7 @@ namespace Restaurant_Order_Tracking
             }
             RichTextBox nxtOrd = richtxtTotOrd;
             GlobalData.customerlist.ShowOrderSize(nxtOrd);
+            clearEntry();
         }
 
         // Add node to the custom linked list. 
@@ -140,6 +141,14 @@ namespace Restaurant_Order_Tracking
             }
             RichTextBox nxtOrd = richtxtTotOrd;
             GlobalData.customerlist.ShowOrderSize(nxtOrd);
+            clearEntry();
+        }
+        // Clear entry field for customer name, food, beverage.
+        private void clearEntry()
+        {
+            txtcusName.Clear();
+            txtfoodSelc.Clear();
+            txtbevSelc.Clear();
         }
     }
 }

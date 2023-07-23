@@ -18,7 +18,8 @@ namespace Restaurant_Order_Tracking
         {
             InitializeComponent();
             // Sets the data source for the orders grid to the custom globaldata list. 
-            dataGVOrders.DataSource = GlobalData.customerlist;
+            DataGridView totOrd = dataGVOrders;
+            GlobalData.customerlist.PrintElements(totOrd);
         }
 
         /// <summary>

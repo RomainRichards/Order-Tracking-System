@@ -36,10 +36,10 @@
             this.btnCustomerPortal = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.pnlHeadBorder = new System.Windows.Forms.Panel();
+            this.lblcloseApp = new System.Windows.Forms.Label();
             this.home1 = new Restaurant_Order_Tracking.Home();
             this.orders1 = new Restaurant_Order_Tracking.Orders();
             this.customerPortal1 = new Restaurant_Order_Tracking.CustomerPortal();
-            this.lblcloseApp = new System.Windows.Forms.Label();
             this.pnlsideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlHeadBorder.SuspendLayout();
@@ -105,7 +105,7 @@
             this.btnCustomerPortal.Name = "btnCustomerPortal";
             this.btnCustomerPortal.Size = new System.Drawing.Size(246, 86);
             this.btnCustomerPortal.TabIndex = 1;
-            this.btnCustomerPortal.Text = "CUSTOME PORTAL";
+            this.btnCustomerPortal.Text = "CUSTOMER PORTAL";
             this.btnCustomerPortal.UseVisualStyleBackColor = false;
             this.btnCustomerPortal.Click += new System.EventHandler(this.btnCustomerPortal_Click);
             // 
@@ -133,6 +133,20 @@
             this.pnlHeadBorder.Name = "pnlHeadBorder";
             this.pnlHeadBorder.Size = new System.Drawing.Size(704, 39);
             this.pnlHeadBorder.TabIndex = 1;
+            // 
+            // lblcloseApp
+            // 
+            this.lblcloseApp.AutoSize = true;
+            this.lblcloseApp.BackColor = System.Drawing.Color.Transparent;
+            this.lblcloseApp.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcloseApp.ForeColor = System.Drawing.Color.Sienna;
+            this.lblcloseApp.Location = new System.Drawing.Point(660, 6);
+            this.lblcloseApp.Name = "lblcloseApp";
+            this.lblcloseApp.Size = new System.Drawing.Size(31, 26);
+            this.lblcloseApp.TabIndex = 5;
+            this.lblcloseApp.Text = "X";
+            this.lblcloseApp.Click += new System.EventHandler(this.label1_Click);
+            this.lblcloseApp.MouseHover += new System.EventHandler(this.lblcloseApp_MouseHover);
             // 
             // home1
             // 
@@ -168,20 +182,6 @@
             this.customerPortal1.Name = "customerPortal1";
             this.customerPortal1.Size = new System.Drawing.Size(700, 500);
             this.customerPortal1.TabIndex = 2;
-            // 
-            // lblcloseApp
-            // 
-            this.lblcloseApp.AutoSize = true;
-            this.lblcloseApp.BackColor = System.Drawing.Color.Transparent;
-            this.lblcloseApp.Font = new System.Drawing.Font("Copperplate Gothic Bold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcloseApp.ForeColor = System.Drawing.Color.Sienna;
-            this.lblcloseApp.Location = new System.Drawing.Point(660, 6);
-            this.lblcloseApp.Name = "lblcloseApp";
-            this.lblcloseApp.Size = new System.Drawing.Size(31, 26);
-            this.lblcloseApp.TabIndex = 5;
-            this.lblcloseApp.Text = "X";
-            this.lblcloseApp.Click += new System.EventHandler(this.label1_Click);
-            this.lblcloseApp.MouseHover += new System.EventHandler(this.lblcloseApp_MouseHover);
             // 
             // MainHomeForm
             // 
