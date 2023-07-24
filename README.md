@@ -63,7 +63,7 @@
 
 This project was created to show the implementation of the queue data structure using a custom linked list. 
 The goal in mind was to create a project that would showcase how a restaurant order tracking system works using FIFO (First In, First Out). 
-Reward Members got priority service and skipped to the front of the line. 
+Reward Members got priority service and skipped to the front of the line (addFirst). 
 Implemented IEnumerable to iterate over a collection of a specified type. 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
