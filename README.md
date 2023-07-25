@@ -19,7 +19,7 @@
 <br />
 <div align="center">
 <h3 align="center">Order Tracking System</h3>
- <img align="center" src="https://i.makeagif.com/media/7-23-2023/wrLm5B.gif">
+ <img align="center" src="https://i.makeagif.com/media/7-25-2023/fQ_jPo.gif">
   <p align="center">
     <br />
    Queue Implementation using a Custom Linked List.
@@ -106,11 +106,14 @@ To get a local copy up and running follow these simple example steps.
 
 Use to show how restaurant orders are taken and served. 
 
-![Burger Madness Home](https://github.com/RomainRichards/Order-Tracking-System/assets/96961208/6c946c28-f393-4170-bf8e-4c383762913c)
+![Home Page](https://github.com/RomainRichards/Order-Tracking-System/assets/96961208/f6710491-7d4f-49c8-8e7d-abb70006c058)
 
-![Burger Madness Customer Portal](https://github.com/RomainRichards/Order-Tracking-System/assets/96961208/63627daf-e202-4daa-bfd0-14e41f6d3048)
+![Customer Portal](https://github.com/RomainRichards/Order-Tracking-System/assets/96961208/974f4e9e-06d4-47bb-aa0f-b296f2c455a5)
 
-![Burger Madness Orders](https://github.com/RomainRichards/Order-Tracking-System/assets/96961208/f2ec1ce6-859b-465c-8da9-a23c6cbaad05)
+![Orders](https://github.com/RomainRichards/Order-Tracking-System/assets/96961208/13d858d2-c7de-4ffe-a7e7-f817ab6da0ab)
+
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
